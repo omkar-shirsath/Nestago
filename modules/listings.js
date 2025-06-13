@@ -7,9 +7,12 @@ const listingSchema = new Schema({
     },
     description:String,
     image:{
+        filename:String,
+        url:{
         type:String,
         default:"https://cdn.pixabay.com/photo/2022/11/27/01/47/boat-7618814_1280.jpg",
         Set:(v)=> v===""?"https://cdn.pixabay.com/photo/2022/11/27/01/47/boat-7618814_1280.jpg":v,
+        }
     },
     price:Number,
     location:String,
