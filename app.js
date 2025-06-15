@@ -78,6 +78,14 @@ app.put("/listings/:id",async(req,res)=>{
     await Listing.findByIdAndUpdate(id,{...req.body.Listing});
     res.redirect(`/listings/${id}`);
 })
+
+
+//delete rought
+app.delete("/listings/:id",async(req,res)=>{
+    let {id}=req.params;
+    const deletedListing = await Listing.findByIdAndDelete(id);
+    res.redirect("/listings");
+})
 app.get("/",(req,res)=>{
     res.send("this is root ");
 })
