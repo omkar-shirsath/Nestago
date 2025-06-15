@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nestago</title>
+</head>
+<body>
+    <h1>Edit the Listing : </h1>
+    <br>
+    <form method ="POST" action="/listings/<%=listing._id%>?_method=PUT">
+         <input type="text" value = "<%= listing.title %>" name= "Listing[title]">
+        <br><br>
+        <textarea   name="Listing[description]">  <%= listing.description %> </textarea>
+        <br><br>
+        <input type="text" value ="<%= listing.image.url%>"  name="Listing[image]">
+        <br><br>
+        <input type="number" value ="<%= listing.price %>"  name="Listing[price]">
+        <br><br>
+        <input type="text" value ="<%= listing.country %>"  name="Listing[country]">
+        <br><br>
+        <input type="text" value ="<%= listing.location %>"  name="Listing[location]">
+        <br><br>
+
+        <button type="submit">Edit</button>
+
+    </form>
+</body>
+</html>
