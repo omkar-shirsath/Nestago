@@ -43,6 +43,12 @@ app.get("/listings",async(req,res)=>{
     res.render("Listings/index.ejs",{allListings});
 })
 
+//show rought
+app.get("/listing/:id",async(req,res)=>{
+    let {id} = req.params;
+    const listing = await Listing.findById(id);
+    res.render("listings/show.ejs",{listing});
+})
 
 app.get("/",(req,res)=>{
     res.send("this is root ");
