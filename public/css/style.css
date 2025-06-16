@@ -1,3 +1,19 @@
-body {
-    background:blueviolet;
+.nav-color {
+    background-color: #d7d7d7 !important;
+    
+}
+nav{
+    height:4rem;
+    border-bottom:1px solid #1c1c1c;
+}
+
+
+.navbar-nav a{
+    color:#484848 ;
+}
+
+.fa-compass{
+    color: #e83939;;
+    font-size:2rem;
+    margin:0 4rem;
 }
